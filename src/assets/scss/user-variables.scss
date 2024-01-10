@@ -1,0 +1,54 @@
+//  common styles variables
+
+$primary-color: #160d46;
+
+$hyperlink-background-hover: rgb(32, 49, 93);
+
+$background-color: rgb(243, 244, 255);
+
+$white-color: #ffffff;
+$black-color: black;
+$secondary-color: #000000;
+
+$border-radius: 15px;
+$border-color: rgb(202, 202, 202);
+
+$icon-color: #bfbfbf;
+
+$default-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+$grey-font-color: #64748b;
+
+//  text color related style variables
+
+$heading-border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+$blue-text-color: rgb(63, 63, 197);
+$green-text-color :rgb(63, 197, 70);
+$red-text-color: rgb(197, 63, 63);
+$orange-text-color: rgb(179, 104, 50);
+
+//  button related style variables 
+
+
+$bgColor_light: white;
+$bgColor_dark: black;
+
+$textColor_light: black;
+$textColor_dark: white;
+
+$borderColor_light: black;
+$borderColor_dark: white;
+
+// mixin that enables css variables in light mode
+@mixin lighten() {
+    --bgColor: #{$bgColor_light};
+    --textColor: #{$textColor_light};
+    --borderColor: #{$borderColor_light};
+}
+
+// mixin that enables css variables in dark mode
+@mixin darken() {
+    --bgColor: #{$bgColor_dark};
+    --textColor: #{$textColor_dark};
+    --borderColor: #{$borderColor_dark};
+}

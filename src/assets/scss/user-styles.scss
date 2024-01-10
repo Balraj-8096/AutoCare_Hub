@@ -1,0 +1,81 @@
+@import "../../assets/scss/user-variables.scss";
+
+.page-container {
+    padding: 2rem 2rem;
+}
+
+.card-box {
+    background-color: $white-color;
+    border-radius: 13px;
+    box-shadow: $default-shadow;
+    padding: 1.5rem 1.5rem !important;
+}
+
+.link {
+
+    cursor: pointer;
+
+    i {
+        position: relative;
+        left: 0;
+        transition: ease 0.3s all;
+    }
+
+    &:hover {
+        text-decoration: underline;
+        color: darken($blue-text-color, 5%) !important;
+
+        i {
+            left: 10px;
+            color: darken($blue-text-color, 5%) !important;
+        }
+    }
+}
+
+.NA-label {
+    padding: 4px 10px;
+    background-color: #ebebeb;
+    color: rgb(75, 75, 75);
+    border-radius: 8px;
+}
+
+.icon-color {
+    color: $icon-color;
+}
+
+
+table {
+    width: 100%;
+
+    td {
+        padding: 10px 16px !important;
+        border-bottom: 1px solid #eef0f2 !important;
+    }
+}
+
+.mat-mdc-table .mdc-data-table__row {
+    transition: all ease 0.3s;
+}
+
+.mdc-data-table__cell {
+    padding: 10px 16px 10px 16px;
+}
+
+.mdc-data-table__header-cell {
+    font-weight: 700 !important;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+    border: none;
+}
+
+.clickable {
+
+    tr {
+        cursor: pointer !important;
+
+        &:hover {
+            background: #f3f3f57d !important;
+        }
+    }
+}
