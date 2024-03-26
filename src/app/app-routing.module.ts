@@ -1,10 +1,24 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PortfolioDashboardComponent } from './modules/portfolio/components/portfolio-dashboard/portfolio-dashboard.component';
+import { ProfilePageComponent } from './modules/shared/components/profile-page/profile-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'portfolio', pathMatch: 'full'
+  },
+  {
+    path: 'portfolio',
+    loadChildren: () => import('./modules/portfolio/portfolio.module').then((m) => m.PortfolioModule)
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: true,
+    preloadingStrategy: PreloadAllModules
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -86,3 +86,20 @@
 .animate-fadeDown {
     animation: fadeDown 0.1s ease forwards;
 }
+
+.mouse-scroll-anime{
+    scale: 0.5;
+    opacity: 0;
+    transition: ease-in-out 0.1s all;
+    animation: scroll-fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+
+
+}
+@keyframes scroll-fade-in{
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
